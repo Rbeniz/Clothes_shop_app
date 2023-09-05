@@ -113,38 +113,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-////////////////
-///
-/* class VideoWidget extends StatefulWidget {
-  const VideoWidget({Key? key, required this.videoUrl}) : super(key: key);
-  final String videoUrl;
-
-  @override
-  _VideoWidgetState createState() => _VideoWidgetState(this.videoUrl);
-}
-
-class _VideoWidgetState extends State<VideoWidget> {
-  late VideoPlayerController _controller;
-  final String videoUrl;
-  _VideoWidgetState(this.videoUrl);
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = VideoPlayerController.asset(videoUrl)
-      ..initialize().then((_) {
-        _controller.setLooping(true);
-        _controller.play();
-        setState(() {});
-      });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return VideoPlayer(_controller);
-  }
-}
- */
 class PostContent extends StatelessWidget {
   const PostContent({Key? key}) : super(key: key);
 
@@ -155,9 +123,9 @@ class PostContent extends StatelessWidget {
         Container(
           height: 100,
           padding: const EdgeInsets.only(top: 40),
-          child: Row(
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text(
                 'Following',
                 style: TextStyle(
@@ -182,27 +150,27 @@ class PostContent extends StatelessWidget {
               Expanded(
                 child: Container(
                   padding: const EdgeInsets.all(10),
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         '@extremesports_95',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      const SizedBox(height: 10),
-                      const Text(
+                      SizedBox(height: 10),
+                      Text(
                         'Goein full send in Squaw Valley. #snow @snowboarding # extremesports #sendit #winter',
                         style: TextStyle(
                           color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      SizedBox(height: 10),
                       Row(
-                        children: const [
+                        children: [
                           Icon(
                             Icons.music_note,
                             color: Colors.white,
